@@ -1,7 +1,7 @@
 def call(def input) {
 	def pipelinename = "${env.JOB_BASE_NAME}_${env.BUILD_NUMBER}"
 	
-	def responseGET = httpRequest url: "http://wdflbmxxxd16752.wdf.sap.corp:50002/sap/bc/build/sync?", 
+	def responseGET = httpRequest url: "http://wdflbmd16752.wdf.sap.corp:50002/sap/bc/build/sync?", 
 							   authentication: 'Build', 
 							   httpMode: 'GET', 
 							   customHeaders: [[maskValue: true, name: 'x-csrf-token', value: 'Fetch']]
